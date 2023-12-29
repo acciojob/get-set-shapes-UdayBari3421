@@ -1,31 +1,40 @@
 //complete this code
-class Rectangle {
+class Rectangle{
 	constructor(width, height) {
-	    this._width = width;
-		this._height = height;
+		this.width = width;
+		this.height = height;
 	}
 
-	get width() {
-		return this._width;
+	get getWidth() {
+	    return this.width;
+	}
+	
+	get getHeight() {
+	    return this.height;
 	}
 
-	get height() {
-		return this._height;
+	set setWidth(width) {
+		this.width  = width;
+	}
+
+	set setHeight(height) {
+		this.height  = height;
 	}
 
 	getArea() {
-		return this._width * this._height;
+		return this.width  * this.height;
 	}
 }
 
-class Square extends Animal {
+class Square extends Rectangle {
 	constructor(side) {
 		super(side, side);
+        this.side = side;
 	}
-
-    getPerimeter() {
-	    return 4 * this.width;
-    }
+	
+	getPerimeter() {
+		return 4 * this.side;
+	}
 }
 
 // Do not change the code below this line
